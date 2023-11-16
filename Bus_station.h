@@ -1,40 +1,44 @@
 #pragma once
 #include "Header.h"
+#include "Bus.h"
 #include "LListCouble.h"
 class Bus_station
 {
 public:
 	string name;
+	char label;
 	LListcouble<Bus_station*> near;
-	LList<int>Buses;
-	int Num_of_near=0;
-	int Num_of_bus=0;
+	int Num_of_near = 0;
+	int Num_of_bus = 0;
 	string times;
-	string sss;
 	//Bus* bus_cross[];
 public:
-	Bus_station(string Name)
+	Bus_station(char Label)
 	{
-		name = Name;
+		label = Label;
 	}
-	void getName() 
+	void printLabel()
 	{
-		cout << name;
+		cout << label <<' ';
 	}
 	void add_path(Bus_station* x, int distance)
 	{
 		near.Addlast(distance, x);
 		Num_of_near++;
 	}
-	void print_near()
+	/*void add_bus(Bus* x)
+	{
+		Buses.Addlast(x);
+	}*/
+	/*void print_near()
 	{
 		couble<Bus_station*> x;
-		for (int i = 1;i <= Num_of_near;i++)
+		for (int i = 1; i <= Num_of_near; i++)
 		{
 			x = near.Query(i);
 			cout << name << " -> " << x.first->name << " : " << x.second << " km\n";
 		}
-	}
+	}*/
 	/*void print_Buses()
 	{
 		cout << name << endl;
@@ -49,4 +53,5 @@ public:
 		cout << "Time of bus station now: " << times << endl;
 	}
 };
+
 

@@ -1,7 +1,6 @@
-#pragma once
 #include"Header.h"
 #include"LList.h"
-using namespace std;
+
 
 template <typename T>
 struct couble
@@ -14,7 +13,7 @@ template <typename T>
 struct LListcouble
 {
 	LList<couble<T>> a;
-	int size=0;
+	int size = 0;
 	void Addfirst(int x, T y)
 	{
 		couble<T> b;
@@ -31,13 +30,13 @@ struct LListcouble
 		a.Addlast(b);
 		size++;
 	}
-	couble<T> Query(int i)
+	/*couble<T> Query(int i)
 	{
 		return a.Query(i);
-	}
+	}*/
 	void print()
 	{
-		for (int i = 1;i <= size;i++)
+		for (int i = 1; i <= size; i++)
 		{
 			couble<T> x = a.Query(i);
 			cout << x.first << " " << x.second << endl;;

@@ -1,6 +1,5 @@
 #pragma once
-#include<iostream>
-using namespace std;
+#include "Header.h"
 
 template <typename T>
 struct Node
@@ -14,7 +13,7 @@ struct Node
 };
 template <typename T>
 struct LList
-{	
+{
 	Node<T>* head;
 	int size;
 	LList()
@@ -48,10 +47,10 @@ struct LList
 	}
 	T Query(int n)
 	{
-		if (0<n && n <= size)
+		if (0 < n && n <= size)
 		{
 			Node<T>* p = head;
-			for (int i = 1;i <= n;i++)
+			for (int i = 1; i <= n; i++)
 			{
 				p = p->next;
 			}
@@ -69,4 +68,3 @@ struct LList
 		cout << endl;
 	}
 };
-
