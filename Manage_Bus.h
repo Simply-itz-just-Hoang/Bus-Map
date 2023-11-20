@@ -14,7 +14,7 @@ public:
 		ifstream fi(s);
 		if (!fi.is_open())
 		{
-			cout << "can't read the file thar record the connections of bus station\n";
+			cout << "can't read the file that record the connections of bus station\n";
 		}
 		else
 		{
@@ -146,17 +146,18 @@ public:
 			getline(ss, Name, '|');
 			getline(ss, bsx, '|');
 			getline(ss, verticle);
-			cout << verticle<<endl;
+			//cout << verticle<<endl;
 			//cout << Name << ' ' << bsx << ' ' << verticle << endl;
 			Bus* p = new Bus(Name, bsx);
 			for (int i = 0; i < verticle.size(); i++)
 			{
+				//cout << verticle[i] << " ";
 				Bus_station* p1 = new Bus_station(verticle[i]);
 				Node<Bus_station*>* bs = Manage_bs.head;
 				for (int j = 1;j <= Num_of_BS;j++)
 				{
 					bs = bs->next;
-					if (bs->data->label == verticle[i]);
+					if (bs->data->label == verticle[i])
 					{
 						p1= bs->data;
 						break;
@@ -166,6 +167,7 @@ public:
 				p->add_bus_station(p1);
 				//p1->add_bus(p);
 			}
+			//cout << endl;
 			//cout << endl;
 			//p->getInfo();
 			Manage_b.Addlast(p);
