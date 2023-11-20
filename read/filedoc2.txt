@@ -1,0 +1,15 @@
+A|Cong vien A
+B|Truong THCS B
+C|C zoo
+D|Nha Sach D
+E|Dai hoc E
+F|Dai hoc F
+G|Benh vien G
+H|Sieu thi H
+I|Truong tieu hoc I
+J|Ki tuc xa J
+K|Truong THPT K
+L|Nha van hoa sinh vien L
+M|Cho M
+N|Benh vien N
+O|Truong THCS O
