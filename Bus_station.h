@@ -1,18 +1,19 @@
 #pragma once
 #include "Header.h"
-#include "Bus.h"
 #include "LListCouble.h"
+#include "Bus.h"
+
 class Bus_station
 {
 public:
 	string name;
 	char label;
 	LListcouble<Bus_station*> near;
+	LList<Bus*> Buses;
 	int Num_of_near = 0;
 	int Num_of_bus = 0;
 	string times;
 	//Bus* bus_cross[];
-public:
 	Bus_station(char Label)
 	{
 		label = Label;
@@ -26,6 +27,19 @@ public:
 		near.Addlast(distance, x);
 		Num_of_near++;
 	}
+	int Get_num_of_near()
+	{
+		return Num_of_near;
+	}
+	/*Bus_station* Query(int i)
+	{
+		couble<Bus_station*>* p = near.head;
+		if(i<=Num_of_near)
+			for (int j = 1;j <= i;j++)
+			{
+
+			}
+	}*/
 	/*void add_bus(Bus* x)
 	{
 		Buses.Addlast(x);

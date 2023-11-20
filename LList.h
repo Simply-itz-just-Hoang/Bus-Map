@@ -19,7 +19,7 @@ struct LList
 	LList()
 	{
 		head = new Node<T>(T());
-		head->next = NULL;
+		head->next = nullptr;
 		size = 0;
 	}
 	void Addfirst(T a)

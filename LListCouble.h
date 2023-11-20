@@ -30,10 +30,16 @@ struct LListcouble
 		a.Addlast(b);
 		size++;
 	}
-	/*couble<T> Query(int i)
+	/*T Query(int i)
 	{
-		return a.Query(i);
+		couble<T> x= a.Query(i);
+		return x.first;
 	}*/
+	Node<couble<T>>* Gethead()
+	{
+		return a.head;
+	}
+	
 	void print()
 	{
 		for (int i = 1; i <= size; i++)
