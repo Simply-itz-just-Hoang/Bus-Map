@@ -1,19 +1,16 @@
 #pragma once
-#include "Bus_Station.h"
 #include "LList.h"
 #include "Header.h"
 
 class Bus {
-private:
+public:
 	string name;
 	string bsx;
 	double price = 3000;
-	LList <Bus_station*> path;
-public:
-	Bus(string Name, string bsx)
+	LList <int> path;
+	Bus(string Name)
 	{
 		this->name = Name;
-		this->bsx = bsx;
 	}
 	void getInfo() {
 		cout << "\n==============================";
@@ -23,7 +20,7 @@ public:
 		cout << "\nNumbers of bus station that this bus will pass: " << path.size;
 		cout << "\n==============================\n";
 	}
-	Bus_station* Query(int i)
+	int Query(int i)
 	{
 		return path.Query(i);
 	}
@@ -34,11 +31,11 @@ public:
 	void print_path() {
 		for (int i = 1; i <= path.size; i++)
 		{
-			cout<<path.Query(i)->label <<' '<<path.Query(i)->name<<endl;
-			//cout << "->";
+			cout<<path.Query(i)<<"->";
 		}
+		cout << endl;
 	}
-	void add_bus_station(Bus_station* x)
+	void add_bus_station(int x)
 	{
 		path.Addlast(x);
 	}

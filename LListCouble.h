@@ -1,4 +1,5 @@
-#include"Header.h"
+#pragma once
+//#include"Header.h"
 #include"LList.h"
 
 
@@ -30,16 +31,16 @@ struct LListcouble
 		a.Addlast(b);
 		size++;
 	}
-	/*T Query(int i)
+	couble<T> Query(int i)
 	{
 		couble<T> x= a.Query(i);
-		return x.first;
-	}*/
+		return x;
+	}
 	Node<couble<T>>* Gethead()
 	{
 		return a.head;
 	}
-	
+
 	void print()
 	{
 		for (int i = 1; i <= size; i++)

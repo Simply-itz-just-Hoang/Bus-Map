@@ -9,6 +9,7 @@ struct Node
 	Node(T a)
 	{
 		data = a;
+		next = nullptr;
 	}
 };
 template <typename T>
